@@ -1,7 +1,29 @@
-body {
-  padding: 2rem;
-  height: 100vh;
-  background-image: url('../images/bg-adalab.png');
-  background-color: $color-bg;
+.title {
   font-family: $font-main;
+  font-size: 30px;
+  margin-left: 45px;
+  margin-top: 20px;
+}
+
+.form {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.label {
+  font-family: $font-main;
+}
+
+.tvShow {
+  width: 250px;
+  height: 35px;
+}
+
+.button {
+  font-family: $font-main;
+  width: 70px;
+  height: 35px;
+  background-color: #dc143c;
+  color: white;
+  border-radius: 5px;
 }
