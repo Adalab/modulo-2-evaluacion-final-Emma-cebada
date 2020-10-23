@@ -10,10 +10,10 @@
   </head>
   <body class="page">
     <include src="./partials/header.html"></include>
-    <form class="form">
+    <form class="form" role="form">
       <label for="text" class="label js-label">¿Qué tenemos hoy para ver?</label>
       <input type="text" name="tvShow" id="tvShow" placeholder="Introduce aquí la serie" class="tvShow js-tvShow">
-      <input type="button" value="Buscar" name="search" id="search" class="button js-button">
+      <input type="button" value="Buscar" name="search" aria-label="Search" id="search" class="button js-button">
     </form>
     <ul class="listResult js-listResult">
     </ul>

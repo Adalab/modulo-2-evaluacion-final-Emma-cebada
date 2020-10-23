@@ -25,5 +25,4 @@ function getDataFromApi() {
 btn.addEventListener("click", getDataFromApi);
 
 // start app
-getFromLocalStorage();
 getDataFromApi();
