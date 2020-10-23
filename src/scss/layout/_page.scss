@@ -33,8 +33,17 @@
   margin-top: 40px;
 }
 
-.js-tvShowName {
+.heart__img {
+  width: 14px;
+  height: 14px;
+}
+
+.tvShowName {
   font-family: $font-main;
   font-size: 24px;
   color: blue;
+}
+
+.tvShowContainer {
+  background-color: $colorBrand2;
 }

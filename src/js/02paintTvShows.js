@@ -7,8 +7,8 @@ const paintTvShows = function () {
   let imgTvShow;
   for (let i = 0; i < shows.length; i++) {
     codeHTML += `<li class="js-tvShowItem" id="${i}>`;
-    codeHTML += `<h2 class="js-tvShowName">${shows[i].name}</h2>`;
-    codeHTML += `<div class="js-tvShowContainer">`;
+    codeHTML += `<h2 class="tvShowName js-tvShowName">${shows[i].name}</h2>`;
+    codeHTML += `<div class="tvShowContainer js-tvShowContainer">`;
     if (shows[i].image === null) {
       imgTvShow = `https://via.placeholder.com/210x295/ffffff/666666/?text=TV`;
     } else {
