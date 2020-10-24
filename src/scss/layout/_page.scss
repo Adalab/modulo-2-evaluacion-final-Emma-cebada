@@ -5,6 +5,13 @@
   margin-top: 20px;
 }
 
+.subTittle {
+  font-family: $font-main;
+  font-size: 20px;
+  margin-left: 45px;
+  margin-top: 20px;
+}
+
 .form {
   margin-left: 20px;
   margin-top: 15px;
@@ -29,8 +36,7 @@
 }
 
 .footer {
-  margin-left: 20px;
-  margin-top: 40px;
+  margin: 40px 0 40px 20px;
 }
 
 .heart__img {
@@ -38,12 +44,27 @@
   height: 14px;
 }
 
+.paragraphFail {
+  margin: 20px 0 0 150px;
+}
+
 .tvShowName {
   font-family: $font-main;
   font-size: 24px;
-  color: blue;
+  color: $colorBrand3;
 }
 
 .tvShowContainer {
   background-color: $colorBrand2;
+}
+
+.tvShowItemFav {
+  background-color: $colorBrand3;
+  color: $colorBrand2;
+  font-family: $font-main;
+  font-size: 24px;
+}
+
+.tvShowItemHidden {
+  display: none;
 }

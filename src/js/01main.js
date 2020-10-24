@@ -3,7 +3,7 @@
 const btn = document.querySelector(".js-button");
 const listResult = document.querySelector(".js-listResult");
 let shows = [];
-let result;
+let resultFav = [];
 
 //pedir series al servidor
 function getDataFromApi() {
@@ -18,11 +18,10 @@ function getDataFromApi() {
         for (let i = 0; i < data.length; i++) {
           shows[i] = data[i].show;
         }
+        setLocalStorageShows();
         paintTvShows();
+        listenTvShows();
       }
     })
 };
 btn.addEventListener("click", getDataFromApi);
-
-// start app
-getDataFromApi();
