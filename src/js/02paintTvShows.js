@@ -19,7 +19,7 @@ const paintTvShows = function () {
     } else {
       imgTvShow = shows[i].image.medium;
     }
-    codeHTML += `<img class="js-tvShowImg" src="${imgTvShow}" alt="Imagen de ${shows[i].name}"/>`;
+    codeHTML += `<img class="js-tvShowImg" src="${imgTvShow}" alt="Imagen de ${shows[i].name}" title="Imagen de ${shows[i].name}"/>`;
     codeHTML += `</div>`;
     codeHTML += `</li>`;
   }
@@ -50,14 +50,15 @@ const paintTvShowsFav = function () {
       } else {
         imgTvShow = resultFav[i].image.medium;
       }
-      codeHTML += `<img class="js-tvShowImg" src="${imgTvShow}" alt="Imagen de ${resultFav[i].name}"/>`;
-      codeHTML += `<button class="js-delete-btn" id="${resultFav[i].id}">X</button>`;
+      codeHTML += `<img class="js-tvShowImg" src="${imgTvShow}" alt="Imagen de ${resultFav[i].name}" title="Imagen de ${resultFav[i].name}"/>`;
+      codeHTML += `<button class="delete-btn js-delete-btn" id="${resultFav[i].id}">X</button>`;
       codeHTML += `</li>`;
       codeHTML += `</div>`;
     }
   }
   const eachTvShow = document.querySelector(".js-favoriteList");
   eachTvShow.innerHTML = codeHTML;
+  listenDeleteBtn();
 }
 
 

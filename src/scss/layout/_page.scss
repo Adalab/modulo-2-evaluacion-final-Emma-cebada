@@ -30,8 +30,8 @@
   font-family: $font-main;
   width: 70px;
   height: 35px;
-  background-color: #dc143c;
-  color: white;
+  background-color: $colorBrand1;
+  color: $colorWhite;
   border-radius: 5px;
 }
 
@@ -63,6 +63,13 @@
   color: $colorBrand2;
   font-family: $font-main;
   font-size: 24px;
+}
+
+.delete-btn {
+  width: 50px;
+  border-radius: 5px;
+  background-color: $colorBrand1;
+  color: $colorWhite;
 }
 
 .tvShowItemHidden {

@@ -1,7 +1,7 @@
 "use strict";
 
 // escuhar un click sobre una serie
-// marcarla como favorita
+// des/marcarla como favorita
 
 const favoritesTvShows = function (ev) {
   const clicked = parseInt(ev.currentTarget.id);
@@ -13,8 +13,13 @@ const favoritesTvShows = function (ev) {
         resultFav[clicked] = shows[i];
       }
     }
-  } else {
-    resultFav.splice(clicked, 1);
+    // } else {
+    //   for (let j = 0; j < resultFav.length; j++) {
+    //     if (resultFav[j] != null && clicked === resultFav[j].id) {
+    //       shows[clicked] = null;
+    //     }
+    //   }
+    // resultFav.splice(clicked, 1);
   }
   setLocalStorageReFav();
   paintTvShows();
@@ -29,13 +34,20 @@ function listenTvShows() {
   }
 }
 
-// const getFilterClassName = tvShowIndex => {
-//   const tvShowSerie = tvShowsSeries[tvShowIndex];
-//   const name = tvShowSerie.name.toLowerCase();
-//   const tvShowValue = tvShow.value.toLowerCase();
-//   if (name.includes(tvShowValue)) {
-//     return "";
-//   } else {
-//     return "tvShowItemHidden";
-//   }
-// };
+const favoritesDeleteTvShows = function (ev) {
+  const clicked = parseInt(ev.currentTarget.id);
+  for (let i = 0; i < resultFav.length; i++) {
+    if (resultFav[i] != null && clicked === resultFav[i].id) {
+      resultFav[clicked] = null;
+    }
+  }
+  setLocalStorageReFav();
+  paintTvShowsFav();
+}
+
+function listenDeleteBtn() {
+  const btnDeleteItems = document.querySelectorAll(".js-delete-btn");
+  for (const btnDeleteItem of btnDeleteItems) {
+    btnDeleteItem.addEventListener("click", favoritesDeleteTvShows);
+  }
+}
