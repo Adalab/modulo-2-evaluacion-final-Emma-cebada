@@ -72,6 +72,15 @@
   color: $colorWhite;
 }
 
+.resetBtn {
+  font-family: $font-main;
+  width: 70px;
+  height: 35px;
+  background-color: $colorBrand1;
+  color: $colorWhite;
+  border-radius: 5px;
+}
+
 .tvShowItemHidden {
   display: none;
 }

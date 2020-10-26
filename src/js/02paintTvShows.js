@@ -59,6 +59,7 @@ const paintTvShowsFav = function () {
   const eachTvShow = document.querySelector(".js-favoriteList");
   eachTvShow.innerHTML = codeHTML;
   listenDeleteBtn();
+  listenResetBtn();
 }
 
 

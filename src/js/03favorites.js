@@ -13,13 +13,6 @@ const favoritesTvShows = function (ev) {
         resultFav[clicked] = shows[i];
       }
     }
-    // } else {
-    //   for (let j = 0; j < resultFav.length; j++) {
-    //     if (resultFav[j] != null && clicked === resultFav[j].id) {
-    //       shows[clicked] = null;
-    //     }
-    //   }
-    // resultFav.splice(clicked, 1);
   }
   setLocalStorageReFav();
   paintTvShows();
@@ -50,4 +43,22 @@ function listenDeleteBtn() {
   for (const btnDeleteItem of btnDeleteItems) {
     btnDeleteItem.addEventListener("click", favoritesDeleteTvShows);
   }
+}
+
+// reset de la lista de favoritos
+
+const favoritesResetTvShows = function (ev) {
+  const clicked = parseInt(ev.currentTarget.id);
+  const indexFav = resultFav.indexOf(clicked);
+  const isFav = indexFav !== -1;
+  if (isFav === false) {
+    resultFav.length = 0;
+  }
+  setLocalStorageReFav();
+  paintTvShowsFav();
+}
+
+function listenResetBtn() {
+  const btnReset = document.querySelector(".js-resetBtn");
+  btnReset.addEventListener("click", favoritesResetTvShows);
 }
