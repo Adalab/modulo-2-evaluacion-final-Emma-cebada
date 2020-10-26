@@ -1,7 +1,6 @@
 "use strict";
 
-//guardar y coger datos en el localStorage
-
+// get and save data in localStorage
 function setLocalStorageShows() {
   localStorage.setItem("shows", JSON.stringify(shows)); //Esto es para convertir en json el array
 }

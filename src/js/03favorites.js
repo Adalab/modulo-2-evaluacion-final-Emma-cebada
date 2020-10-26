@@ -1,8 +1,7 @@
 "use strict";
 
-// escuhar un click sobre una serie
-// des/marcarla como favorita
-
+// listen event
+// un/check a favorite tv show
 const favoritesTvShows = function (ev) {
   const clicked = parseInt(ev.currentTarget.id);
   const indexFav = resultFav.indexOf(clicked);
@@ -13,12 +12,13 @@ const favoritesTvShows = function (ev) {
         resultFav[clicked] = shows[i];
       }
     }
+    setLocalStorageReFav();
+    paintTvShows();
+    paintTvShowsFav();
+    listenTvShows();
   }
-  setLocalStorageReFav();
-  paintTvShows();
-  paintTvShowsFav();
-  listenTvShows();
 }
+
 
 function listenTvShows() {
   const tvShowItems = document.querySelectorAll(".js-tvShowItem");
@@ -27,6 +27,8 @@ function listenTvShows() {
   }
 }
 
+// listen click on every single button
+// erase tv show from the favorite list
 const favoritesDeleteTvShows = function (ev) {
   const clicked = parseInt(ev.currentTarget.id);
   for (let i = 0; i < resultFav.length; i++) {
@@ -45,8 +47,8 @@ function listenDeleteBtn() {
   }
 }
 
-// reset de la lista de favoritos
-
+// listen click on reset button
+// reset favorites list
 const favoritesResetTvShows = function (ev) {
   const clicked = parseInt(ev.currentTarget.id);
   const indexFav = resultFav.indexOf(clicked);

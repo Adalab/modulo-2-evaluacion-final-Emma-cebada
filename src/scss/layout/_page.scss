@@ -10,6 +10,7 @@
   font-size: 20px;
   margin-left: 45px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .form {
@@ -50,12 +51,26 @@
 
 .tvShowName {
   font-family: $font-main;
+  width: 300px;
   font-size: 24px;
   color: $colorBrand3;
+  margin-top: 30px;
+}
+
+.tvShowImgFav {
+  margin-left: 15px;
+  margin-top: 20px;
 }
 
 .tvShowContainer {
   background-color: $colorBrand2;
+  width: 300px;
+}
+
+.tvShowContainerItem {
+  width: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 .tvShowItemFav {
@@ -63,6 +78,7 @@
   color: $colorBrand2;
   font-family: $font-main;
   font-size: 24px;
+  width: 300px;
 }
 
 .delete-btn {
@@ -70,6 +86,7 @@
   border-radius: 5px;
   background-color: $colorBrand1;
   color: $colorWhite;
+  margin-left: 15px;
 }
 
 .resetBtn {
@@ -79,6 +96,7 @@
   background-color: $colorBrand1;
   color: $colorWhite;
   border-radius: 5px;
+  margin-top: 30px;
 }
 
 .tvShowItemHidden {
