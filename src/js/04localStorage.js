@@ -30,3 +30,4 @@ function getLocalStorage() {
 // start app
 getLocalStorage("shows", shows);
 getLocalStorage("resultFav", resultFav);
+listenLogBtn();

@@ -13,6 +13,7 @@ const paintTvShows = function () {
     }
     codeHTML += `<li class="js-tvShowItem ${classFav}" id="${shows[i].id}">`;
     codeHTML += `<h2 class="tvShowName js-tvShowName ${classFav}">${shows[i].name}</h2>`;
+    codeHTML += `<p> ${shows[i].status}</p>`;
     codeHTML += `<div class="tvShowContainer js-tvShowContainer ${classFav}">`;
     codeHTML += `<div class="tvShowContainerItem ${classFav}">`;
     if (shows[i].image === null) {

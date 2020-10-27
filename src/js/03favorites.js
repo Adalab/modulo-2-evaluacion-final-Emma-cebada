@@ -9,7 +9,7 @@ const favoritesTvShows = function (ev) {
   if (isFav === false) {
     for (let i = 0; i < shows.length; i++) {
       if (clicked === shows[i].id) {
-        resultFav[clicked] = shows[i];
+        resultFav.push(shows[i]);
       }
     }
     setLocalStorageReFav();
@@ -63,4 +63,16 @@ const favoritesResetTvShows = function (ev) {
 function listenResetBtn() {
   const btnReset = document.querySelector(".js-resetBtn");
   btnReset.addEventListener("click", favoritesResetTvShows);
+}
+
+function consoleLog() {
+  for (let i = 0; i < resultFav.length; i++) {
+    console.log(resultFav[i].name);
+
+  }
+}
+
+function listenLogBtn() {
+  const btnLog = document.querySelector(".js-BtnLog");
+  btnLog.addEventListener("click", consoleLog);
 }
